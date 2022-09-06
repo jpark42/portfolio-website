@@ -58,16 +58,17 @@ a {
 }
 */
 
-a:hover, a:focus {
-    /* No underlining when hovering over a link */
-    text-decoration: none
+.navigation-list__item {
+    text-decoration: none;
 }
 
-/*
-a:active {
-    color: #9de9f2;
+.navigation-list__item--active {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
 }
-*/
+
+a:hover, a:focus {
+    /* add transition here when hovering over a nav bar link*/
+}
 
 button,
 .button {
@@ -103,10 +104,15 @@ span {
 #profile__pic {
     float: left;
     margin-right: 40px;
-    margin-left: 40px;
-    width: 250px;
+    margin-left: 20px;
+    max-width: 250px;
+    width: 50%;
     border-radius: 50%;
 }
+
+/**min-width: 360px;
+max-width: 1200px;
+**/
 
 #page-footer {
     clear: both;
@@ -116,7 +122,7 @@ span {
 }
 
 .profile {
-    max-width: 700px;
+    max-width: 685px;
     margin: 0 auto;
 }
 
@@ -145,12 +151,9 @@ span {
 
 .navigation-list li {
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
-.navigation-list__item {
-    text-decoration: none;
-}
 
 .about {
     max-width: 800px;
@@ -160,6 +163,12 @@ span {
 
 .hobbies-list {
     list-style-type: none;
+    display: inline-block;
+    text-align: left;
+}
+
+.hobbies {
+    text-align: center;
 }
 
 .exp-table {
@@ -209,6 +218,13 @@ span {
 .project-list__item--link {
     display: flex;
     justify-content: center;
+}
+
+.message-button {
+    font-family: inherit;
+    background-color: var(--dark-grey);
+    color: var(--text-color);
+    margin-top: 2px;;
 }
 
 .contact {
